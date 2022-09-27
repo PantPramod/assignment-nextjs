@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { login, logout, emailValue, tokenValue } from '../slices/authSlice'
+import {
+  // login,
+  //  logout,
+  emailValue,
+  tokenValue
+} from '../slices/authSlice'
 import { BsFillBellFill, BsSearch } from 'react-icons/bs'
 import { HiHome } from 'react-icons/hi'
 import { MdPeople } from 'react-icons/md'
@@ -36,7 +41,7 @@ const dashboard = () => {
   const token = useSelector(tokenValue)
 
 
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
 
 
@@ -122,7 +127,7 @@ const dashboard = () => {
       })
       const searchResult = response.data.data.filter((e: employee) => e.company.toLowerCase() === company.toLowerCase())
       setEmployees([...searchResult])
-      setShowFilterBox(false) 
+      setShowFilterBox(false)
       console.log(response.data)
     } catch (err) {
       console.log(err)

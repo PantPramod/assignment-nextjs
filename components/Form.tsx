@@ -9,16 +9,16 @@ type propType = {
     close: () => void,
     setFlag: Dispatch<SetStateAction<boolean>>,
     id?: string,
-    type:string,
-    emp?:employee|null
+    type: string,
+    emp?: employee | null
 }
 
-const Form = ({ close, setFlag, id, type , emp}: propType) => {
+const Form = ({ close, setFlag, id, type, emp }: propType) => {
 
-    const [username, setUsername] = useState(type==="edit"?emp?.username:"")
-    const [email, setEmail] = useState(type==="edit"?emp?.email:"")
-    const [phoneno, setPhoneno] = useState(type==="edit"?emp?.phoneno:"")
-    const [company, setCompany] = useState(type==="edit"?emp?.company:"")
+    const [username, setUsername] = useState(type === "edit" ? emp?.username : "")
+    const [email, setEmail] = useState(type === "edit" ? emp?.email : "")
+    const [phoneno, setPhoneno] = useState(type === "edit" ? emp?.phoneno : "")
+    const [company, setCompany] = useState(type === "edit" ? emp?.company : "")
     const token = useSelector(tokenValue)
 
 
@@ -78,7 +78,7 @@ const Form = ({ close, setFlag, id, type , emp}: propType) => {
     return (
         <div className='fixed top-0 left-0 right-0 bottom-0 bg-transparent flex justify-center items-center'>
             <form
-                onSubmit={(e) =>{type==="create"?submitHandler(e):updateHandler(e)}}
+                onSubmit={(e) => { type === "create" ? submitHandler(e) : updateHandler(e) }}
                 className="mx-auto w-[40%] shadow-lg shadow-[rgb(73,83,83)] p-8 flex flex-col bg-white max-w-2xl rounded-lg"
             >
                 <AiOutlineClose

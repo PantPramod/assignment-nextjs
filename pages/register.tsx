@@ -43,7 +43,7 @@ const register = () => {
                     const token = response.data.token
                     dispatch(login({ email, token }))
                     router.push("/dashboard")
-                } else if(response.status===409) {
+                } else if (response.status === 409) {
                     setLoading(false)
                     alert("server problem")
                 }

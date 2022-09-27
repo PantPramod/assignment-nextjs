@@ -17,14 +17,14 @@ const FilterBox = ({ submitHandler, close }: propType) => {
                     size={25}
                     onClick={() => close()} />
                 <p className='p-5 font-bold cursor-pointer'>Company</p>
-                <p className='px-5 py-1 bold hover:font-bold cursor-pointer' onClick={()=>setCompanyName("Mars")}>Mars</p>
-                <p className='px-5 py-1 bold hover:font-bold cursor-pointer' onClick={()=>setCompanyName("Earth")}>Earth</p>
-                <p className='px-5 py-1 bold hover:font-bold cursor-pointer' onClick={()=>setCompanyName("Venus")}>Venus</p>
+                <p className='px-5 py-1 bold hover:font-bold cursor-pointer' onClick={() => setCompanyName("Mars")}>Mars</p>
+                <p className='px-5 py-1 bold hover:font-bold cursor-pointer' onClick={() => setCompanyName("Earth")}>Earth</p>
+                <p className='px-5 py-1 bold hover:font-bold cursor-pointer' onClick={() => setCompanyName("Venus")}>Venus</p>
                 <input className='rounded m-5 p-2 outline-none border-[1px] border-gray-400' value={companyName} onChange={(e) => setCompanyName(e.target.value)} type="text" placeholder='company name' />
-                <br/>
-                <p 
-                className='cursor-pointer rounded-2xl m-5 text-center p-2  border-[1px] border-gray-400 ' 
-                onClick={()=>submitHandler(companyName)}>Apply</p>
+                <br />
+                <p
+                    className='cursor-pointer rounded-2xl m-5 text-center p-2  border-[1px] border-gray-400 '
+                    onClick={() => submitHandler(companyName)}>Apply</p>
             </div>
         </div>
     )
