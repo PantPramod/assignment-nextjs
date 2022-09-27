@@ -5,7 +5,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'mybg': "url('https://colorlib.com/etc/lf/Login_v4/images/bg-01.jpg')",
+      
+      }
+    },
   },
   plugins: [],
 }
